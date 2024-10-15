@@ -1,0 +1,9 @@
+frontend/*_templ.go
+sql_bindings/
+tmp/
+node_modules/
+
+assets/out.css
+
+portal
+.env

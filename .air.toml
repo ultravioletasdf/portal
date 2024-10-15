@@ -1,0 +1,11 @@
+[build]
+  bin = "./tmp/main"
+  cmd = "templ generate && tailwindcss -i ./frontend/styles.css -o ./assets/out.css && sqlc generate && go build -o ./tmp/main ."
+  delay = 1000
+  exclude_dir = ["assets", "tmp", "vendor", "node_modules", "db", "sql_bindings"]
+  exclude_regex = ["_templ.go"]
+  include_ext = ["go", "tpl", "tmpl", "html", "templ"]
+[proxy]
+  enabled = true
+  proxy_port = 4000
+  app_port = 3000
